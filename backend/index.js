@@ -30,5 +30,8 @@ mongoose.connect(
 
 // set up routes
 
+app.get("/test", () =>  {
+  console.log("Hi")
+})
 app.use("/users", require("./routes/users"));
 app.use("/todos", require("./routes/todo"));
