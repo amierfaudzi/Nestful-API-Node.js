@@ -30,8 +30,8 @@ mongoose.connect(
 
 // set up routes
 
-app.get("/test", () =>  {
-  console.log("Hi")
+app.get("/test", (req, res) =>  {
+  return res.status(200).json("Hi, the initial test has been passed")
 })
 app.use("/users", require("./routes/users"));
 app.use("/todos", require("./routes/todo"));
